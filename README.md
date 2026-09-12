@@ -1,44 +1,76 @@
-## Marwan Maher
+# Marwan Maher
 
-Digital transformation, and the tooling that makes it survive contact with real work.
+**Digital Transformation · IP & Trademarks · Riyadh, Saudi Arabia**
 
-I build internal platforms for IP and trademark operations — case management, automated
-watch pipelines, and the integrations that hold them together. Most of what I ship is
-private, so this profile is the small part that generalises.
+I lead digital transformation for an intellectual-property practice — turning trademark filing,
+watching and enforcement from spreadsheet-and-inbox work into systems that run on their own and
+tell people what needs doing.
 
-### 🔁 claude-account-switcher
+Most of what I ship is internal, so this profile is the part that generalises: how I think about
+building software for a domain where being wrong has legal consequences.
 
-**The problem:** you are deep in a task, Claude Code hits its 5-hour limit, and your second
-account sits idle. Switching means logging out, logging back in, and abandoning a
-conversation you were forty messages into. So you wait.
+---
 
-**The fix:** one command. The run ends, the transcript moves, and the same conversation
-resumes on your other account in about four seconds.
+## What I work on
 
-**Who it's for:** anyone holding more than one Claude subscription — typically a personal
-plan and a work seat — who loses real time to the limit window. It doesn't pool or share
-accounts; every account's own limits still apply.
+**Trademark watch, at registry scale.**
+Monitoring national registries and official gazettes for marks that conflict with a client's
+portfolio, across multiple countries and two scripts. The hard part is not fetching the data — it
+is deciding which of hundreds of thousands of new marks actually threaten yours, and being able to
+defend that judgement to a lawyer.
 
-Built on the `CLAUDE_CONFIG_DIR` variable alone. No proxies, no third-party services, no
-network calls, no telemetry. MIT.
+**Matching that survives Arabic and English in the same pipeline.**
+A staged funnel rather than one clever score: filter by Nice classification, retrieve nearest
+neighbours by vector similarity, rank on a composite of phonetic, visual and semantic distance,
+then put the survivors in front of a language model for a reasoned verdict. Each stage exists
+because the stage before it produced a specific kind of false positive.
 
-→ **[claude-account-switcher](https://github.com/MarwanMaher0/claude-account-switcher)**
+**AI where it is accountable, not decorative.**
+Model output that drives a legal recommendation gets judged against real historical cases before
+anyone trusts it. I care far more about the false-positive rate an operator actually sees than
+about a benchmark number.
 
-### What I care about in code
+**The platform underneath.**
+Django and Vue, bilingual Arabic/English with genuine RTL rather than a mirrored afterthought,
+role-scoped operations tooling, and a cloud migration done without an outage. Unglamorous work
+that decides whether any of the above reaches a user.
 
-- **Check the real data before writing the parser.** The rate-limit detection in that tool
-  is built on an actual recorded 429, not a guess at the shape. A later test against the
-  real binary showed a 429 can also mean transient throttling, with a different payload —
-  which would have been a false switch on every hiccup.
-- **Tests that cost nothing to run.** That project stubs the CLI and uses a throwaway HOME,
-  so the suite touches no real account and consumes no API quota. 109 assertions, no
-  framework to install.
-- **Say what broke.** Mid-build, my own tool logged me out of my main account by setting one
-  environment variable that looked harmless. That story is in the README, because a fork
-  would otherwise reintroduce it.
+**Deciding what not to build.**
+I spend as much time cutting scope as adding it. Most operational pain turns out to be a workflow
+problem wearing a feature request as a disguise.
 
-### Currently
+---
 
-Working on trademark-watch automation and the operations platform around it.
+## How I work
 
-📫 marwanmaher635@gmail.com
+- **Look at the real data before writing the parser.** Formats you assume are formats you get
+  wrong. More than once a field I "knew" the shape of turned out to have two shapes, and the
+  difference mattered.
+- **Test in the real thing.** Scripted probes report success on broken paths. If it is a user
+  interface, it is not done until it has been driven in a browser.
+- **Make the failure mode expensive to reintroduce.** A bug that caused real damage earns a test,
+  a comment explaining *why*, and a line in the README — not just a fix.
+- **Say plainly what broke.** Post-mortems that hedge teach nobody anything.
+
+---
+
+## Open source
+
+**[claude-account-switcher](https://github.com/MarwanMaher0/claude-account-switcher)** — run
+several Claude Code accounts and fail over when one hits its rate limit, carrying the conversation
+across. Built because I kept stalling on one subscription while a second sat idle. MIT, Linux and
+macOS, no network calls, 109 tests that consume no API quota.
+
+The interesting part was the constraint: an account is bound at process start, so nothing can
+switch one mid-session. Everything else follows from accepting that.
+
+---
+
+## Tools
+
+`Python` · `Django` · `Vue` · `PostgreSQL` · `Playwright` · `Docker` · `OCI` / `AWS` ·
+`vector search` · `LLM pipelines` · `Arabic/English RTL`
+
+---
+
+📫 **marwanmaher635@gmail.com**
