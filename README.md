@@ -73,4 +73,4 @@ switch one mid-session. Everything else follows from accepting that.
 
 ---
 
-📫 **marwanmaher635@gmail.com**
+📫 **marwanmaher635@gmail.com** · 💼 **[LinkedIn](https://www.linkedin.com/in/marwan-maher-b11628227/)**
