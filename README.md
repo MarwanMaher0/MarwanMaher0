@@ -1,10 +1,10 @@
 # Marwan Maher
 
-**Digital Transformation · IP & Trademarks · Riyadh, Saudi Arabia**
+**Technical PM & Engineer · IP & Trademark Systems · Egypt (working with a Riyadh IP-services firm) · Open to remote & relocation (KSA/UAE)**
 
-I lead digital transformation for an intellectual-property practice — turning trademark filing,
-watching and enforcement from spreadsheet-and-inbox work into systems that run on their own and
-tell people what needs doing.
+I am the Project Manager for IT projects at an IP-services firm in Riyadh — turning trademark
+filing, watching and enforcement from spreadsheet-and-inbox work into systems that run on their
+own and tell people what needs doing.
 
 Most of what I ship is internal, so this profile is the part that generalises: how I think about
 building software for a domain where being wrong has legal consequences.
@@ -17,7 +17,8 @@ building software for a domain where being wrong has legal consequences.
 Monitoring national registries and official gazettes for marks that conflict with a client's
 portfolio, across multiple countries and two scripts. The hard part is not fetching the data — it
 is deciding which of hundreds of thousands of new marks actually threaten yours, and being able to
-defend that judgement to a lawyer.
+defend that judgement to a lawyer. Ran a four-vendor RFQ for the build, then designed and led the
+in-house implementation; it is in production, monitoring registries across 21 countries.
 
 **Matching that survives Arabic and English in the same pipeline.**
 A staged funnel rather than one clever score: filter by Nice classification, retrieve nearest
@@ -41,6 +42,20 @@ problem wearing a feature request as a disguise.
 
 ---
 
+## Selected work
+
+- **IPORA** — IP management platform with 52 live services. Sole architect and builder, from an
+  empty repo to production; now the daily system of record for operations. Django + Vue,
+  bilingual Arabic/English with genuine RTL.
+- **TM Watch** — trademark watch at registry scale. Ran a four-vendor RFQ, then designed and led
+  the in-house build; in production, monitoring registries across 21 countries.
+- **[Cepro.ai](https://cepro.ai)** — Next.js 15 + React 19 rebuild with in-browser Arabic OCR
+  (Tesseract.js). Live at https://cepro.ai.
+
+Portfolio & CV: https://marwanmaher.vercel.app
+
+---
+
 ## How I work
 
 - **Look at the real data before writing the parser.** Formats you assume are formats you get
@@ -59,7 +74,7 @@ problem wearing a feature request as a disguise.
 **[claude-account-switcher](https://github.com/MarwanMaher0/claude-account-switcher)** — run
 several Claude Code accounts and fail over when one hits its rate limit, carrying the conversation
 across. Built because I kept stalling on one subscription while a second sat idle. MIT, Linux and
-macOS, no network calls, 109 tests that consume no API quota.
+macOS, no network calls, 218 assertions that consume no API quota.
 
 The interesting part was the constraint: an account is bound at process start, so nothing can
 switch one mid-session. Everything else follows from accepting that.
