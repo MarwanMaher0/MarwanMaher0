@@ -1,122 +1,94 @@
-# Marwan Maher
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
+  <img alt="Marwan Maher. Technical PM & Engineer. Decide · Ship · Learn, plus Arabic/English RTL." src="assets/banner-light.svg" width="100%">
+</picture>
 
-**Technical PM & Engineer · IP & Legal-tech · Egypt (working with a Riyadh IP-services firm) · Open to remote & relocation (KSA/UAE)**
+**Egypt · Open to remote & relocation (KSA/UAE)** · marwanmaher635@gmail.com · [LinkedIn](https://www.linkedin.com/in/marwan-maher-b11628227) · [Portfolio](https://marwanmaher.vercel.app)
 
-I am the Project Manager for IT projects at an IP-services firm in Riyadh — turning trademark
-filing, watching and enforcement from spreadsheet-and-inbox work into systems that run on their
-own and tell people what needs doing.
-
-The products themselves are my employer's and stay internal, so this profile is the part that
-generalises: how I think about building software for a domain where being wrong has legal
-consequences.
-
----
-
-## What I work on
-
-**Owning a portfolio, not a ticket queue.**
-Five production systems, from requirements and procurement through release and maintenance. That
-includes writing the requirements a vendor is judged against, running the evaluation, and being
-the one accountable when the decision is to build instead of buy.
-
-**AI where it is accountable, not decorative.**
-Model output that drives a legal recommendation gets validated against real historical outcomes
-before anyone trusts it. I care far more about the false-positive rate an operator actually sees
-than about a benchmark number.
-
-**The platform underneath.**
-Django and Vue, bilingual Arabic/English with genuine RTL rather than a mirrored afterthought,
-role-scoped operations tooling, and a cloud migration done without an outage. Unglamorous work
-that decides whether any of the above reaches a user.
-
-**Deciding what not to build.**
-I spend as much time cutting scope as adding it. Most operational pain turns out to be a workflow
-problem wearing a feature request as a disguise. One finished reporting build was rejected because
-it missed what the business actually needed; re-scoping it was the right call, not a setback.
-
----
-
-## Selected work
-
-- **IP management platform** — sole architect and builder, from an empty repo to production; now
-  the daily system of record for operations. Django + Vue, bilingual Arabic/English with genuine
-  RTL, role-scoped access.
-- **Trademark monitoring** — as PM: wrote the requirements, ran a four-vendor evaluation, then led
-  the in-house build. In production.
-- **[Cepro.ai](https://cepro.ai)** — Next.js 15 + React 19 rebuild with in-browser Arabic OCR
-  (Tesseract.js), delivered two weeks early. Live at https://cepro.ai.
-
-Internal products are described at the level of my role only; implementation details belong to my
-employer.
-
-Portfolio & CV: https://marwanmaher.vercel.app
-
----
-
-## How I work
-
-- **Look at the real data before writing the parser.** Formats you assume are formats you get
-  wrong. More than once a field I "knew" the shape of turned out to have two shapes, and the
-  difference mattered.
-- **Test in the real thing.** Scripted probes report success on broken paths. If it is a user
-  interface, it is not done until it has been driven in a browser.
-- **Make the failure mode expensive to reintroduce.** A bug that caused real damage earns a test,
-  a comment explaining *why*, and a line in the README — not just a fix.
-- **Say plainly what broke.** Post-mortems that hedge teach nobody anything.
+I am the Project Manager for IT projects at an IP-services firm in Riyadh, and I have been building
+software since 2022. I run the IT portfolio, five production systems, from requirements and vendor
+evaluation through release and maintenance, in a domain where being wrong has legal consequences.
+The products are my employer's and stay internal, so this profile shows the part that generalises:
+the tools I build in the open, and how I work.
 
 ---
 
 ## Open source
 
-Three small tools that teach one project from start to finish — decide, ship, learn:
+### Project lifecycle: decide, ship, learn
 
-**[decision-matrix](https://github.com/MarwanMaher0/decision-matrix)** — a guided decision matrix for
-build-versus-buy and tool choices ([try it](https://marwanmaher0.github.io/decision-matrix/)). It keeps
-must-haves apart from weighted criteria, shows how far a weight has to move before a different option
-wins, and writes a decision record you can commit. Runs entirely in the browser. Vue 3, 63 tests.
+| Tool | What it helps you do | Stack | Tests | Link |
+| --- | --- | --- | ---: | --- |
+| **decision-matrix** | Make a build-vs-buy or tool choice you can defend: must-haves kept apart from weights, how far a weight must move before another option wins, and a decision record you can commit | Vue 3 · TypeScript | 63 | [repo](https://github.com/MarwanMaher0/decision-matrix) · [live demo](https://marwanmaher0.github.io/decision-matrix/) |
+| **phasegate** | Walk a project from discover to operate, and fail CI when a phase the team has moved past is not actually done | TypeScript · CLI · GitHub Action | 86 | [repo](https://github.com/MarwanMaher0/phasegate) |
+| **django-postmortem** | Run blameless incident reviews where every action item names the guard that stops the failure coming back | Python · Django | 133 | [repo](https://github.com/MarwanMaher0/django-postmortem) |
 
-**[phasegate](https://github.com/MarwanMaher0/phasegate)** — a CLI and GitHub Action that walks a project
-from discover to operate. It writes short guided documents for each phase and fails CI when a phase the
-team has moved past is not actually done: requirements without acceptance criteria, decisions still
-"proposed", a release checklist with no rollback plan. It checks its own repository. TypeScript, 86 tests.
+### Arabic/English RTL
 
-**[django-postmortem](https://github.com/MarwanMaher0/django-postmortem)** — blameless incident reviews
-for Django. It flags blame-shaped phrasing, and every action item has to name the guard that stops the
-failure coming back: a regression test, a constraint, an alert. A review cannot close until each fix is
-verified. 133 tests.
+| Tool | What it helps you do | Stack | Tests | Link |
+| --- | --- | --- | ---: | --- |
+| **vue-rtl-kit** | Stop dates, phone numbers and order references reversing inside Arabic text, with direction state that survives SSR and logical-property utilities | Vue 3 · Nuxt · TypeScript | 106 | [repo](https://github.com/MarwanMaher0/vue-rtl-kit) |
+| **django-rtl-admin** | Make the Django admin properly right-to-left: logical-property styling, isolated cell values, locale numbering systems and a language switcher | Python · Django | 192 | [repo](https://github.com/MarwanMaher0/django-rtl-admin) |
 
-**[vue-rtl-kit](https://github.com/MarwanMaher0/vue-rtl-kit)** — a Vue 3 and Nuxt toolkit for
-right-to-left that actually holds up. The piece I care about is bidirectional text: in an Arabic
-sentence, a date, a phone number, an order reference or a version string silently reverses, and
-users report it as "the number is wrong" rather than as a rendering bug. The kit isolates those
-runs, plus direction state that survives SSR, logical-property utilities, and locale-aware
-formatting across numbering systems. MIT, 106 tests, CI on Node 20 and 22.
+In an Arabic sentence, a date or a version string silently reverses, and users report it as "the
+number is wrong" rather than as a rendering bug. Both kits exist for that.
 
-**[django-rtl-admin](https://github.com/MarwanMaher0/django-rtl-admin)** — the same problem on the
-server side. The Django admin in an RTL locale is mirrored, not translated: the add-button icon
-sits on the wrong edge, object tools float the wrong way, the sidebar chevron never swaps, and
-table cells reverse identifiers. This fixes the styling with logical properties, isolates cell
-contents, formats numbers and dates for the active locale's numbering system, and adds a language
-switcher. MIT, 192 tests, CI across Django 4.2 to 6.1 on Python 3.10 to 3.13.
+### Developer tooling
 
-**[claude-account-switcher](https://github.com/MarwanMaher0/claude-account-switcher)** — run
-several Claude Code accounts and fail over when one hits its rate limit, carrying the conversation
-across. Built because I kept stalling on one subscription while a second sat idle. MIT, Linux and
-macOS, no network calls, 218 assertions that consume no API quota.
+| Tool | What it helps you do | Stack | Tests | Link |
+| --- | --- | --- | ---: | --- |
+| **claude-account-switcher** | Run several Claude Code accounts and fail over when one hits its rate limit, carrying the conversation across | Bash · Python | 218 assertions | [repo](https://github.com/MarwanMaher0/claude-account-switcher) |
 
-The interesting part was the constraint: an account is bound at process start, so nothing can
-switch one mid-session. Everything else follows from accepting that.
-
-**[vue-intent](https://github.com/MarwanMaher0/vue-intent)** — Vue 3 adapter for intent-first,
-state-driven UIs: permission guards, navigation protection, a composable API. TypeScript.
+All six are MIT-licensed and run their tests in CI. Also:
+[vue-intent](https://github.com/MarwanMaher0/vue-intent), a Vue 3 adapter for intent-first,
+state-driven UIs with permission guards and navigation protection.
 
 ---
 
-## Tools
+## Selected work
 
-`Python` · `Django` · `Vue` · `PostgreSQL` · `Playwright` · `Docker` · `OCI` / `AWS` ·
-`LLM pipelines` · `Arabic/English RTL`
+- **IT portfolio, as Project Manager:** five production systems, from requirements and procurement
+  through release and maintenance.
+- **IP management platform:** built end to end on a commercial admin base (data model, modules,
+  role-scoped access, backend integration, bilingual Arabic/English RTL). Now the daily system of
+  record.
+- **Trademark monitoring:** wrote the requirements, ran a four-vendor evaluation, made the
+  build-vs-buy call, then led the in-house build. In production.
+- **Quality and delivery:** founded the QA practice from nothing (530+ Selenium test cases across
+  170+ features, manual regression down 40%), wrote 59 pages of developer documentation that halved
+  onboarding time, and led a cloud migration with zero downtime.
+- **[Cepro.ai](https://cepro.ai):** Next.js 15 + React 19 rebuild, 17 pages, in-browser Arabic OCR
+  (Tesseract.js), delivered two weeks early.
+- **Before that:** sole frontend engineer at Digitee, shipping six production apps including an AR
+  virtual try-on and a Three.js 3D showroom, and extending a multi-locale setup to 16 languages with
+  full RTL. Earlier, frontend engineer on Keme, a US clinic-management platform, at IDAAM.
+
+Internal products are described at the level of my role only; implementation details belong to my
+employer.
 
 ---
 
-📫 **marwanmaher635@gmail.com** · 💼 **[LinkedIn](https://www.linkedin.com/in/marwan-maher-b11628227/)**
+## How I work
+
+- **Own the portfolio, not the ticket queue.** Write the requirements a vendor is judged against,
+  run the evaluation, and be accountable when the answer is to build instead of buy.
+- **Decide what not to build.** Most operational pain is a workflow problem wearing a feature
+  request as a disguise. One finished reporting build was rejected because it missed what the
+  business needed; re-scoping it was the right call, not a setback.
+- **AI where it is accountable.** Model output that drives a legal recommendation is validated
+  against historical outcomes before rollout.
+- **Look at the real data before writing the parser.** More than once, a field I "knew" the shape
+  of turned out to have two shapes, and the difference mattered.
+- **Test in the real thing.** Scripted probes report success on broken paths. A user interface is
+  not done until it has been driven in a browser.
+- **Make the failure mode expensive to reintroduce.** A bug that caused real damage earns a test, a
+  comment explaining *why*, and a line in the README.
+- **Say plainly what broke.** Post-mortems that hedge teach nobody anything.
+
+**Stack:** `Python` · `Django` · `Vue 3` · `Nuxt` · `TypeScript` · `Next.js` · `React` ·
+`Selenium` · `GitHub Actions` · `Arabic/English RTL`
+
+---
+
+**Contact:** marwanmaher635@gmail.com · [LinkedIn](https://www.linkedin.com/in/marwan-maher-b11628227) · [Portfolio](https://marwanmaher.vercel.app)
