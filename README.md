@@ -51,8 +51,8 @@ state-driven UIs with permission guards and navigation protection.
 - **IT portfolio, as Project Manager:** five production systems, from requirements and procurement
   through release and maintenance.
 - **IP management platform:** built end to end on a commercial admin base (data model, modules,
-  role-scoped access, backend integration, bilingual Arabic/English RTL). Now the daily system of
-  record.
+  role-scoped access, backend integration, bilingual Arabic/English RTL). 52 IP services live; the
+  daily system of record.
 - **Trademark monitoring:** wrote the requirements, ran a four-vendor evaluation, made the
   build-vs-buy call, then led the in-house build. In production.
 - **Quality and delivery:** founded the QA practice from nothing (530+ Selenium test cases across
@@ -60,6 +60,8 @@ state-driven UIs with permission guards and navigation protection.
   onboarding time, and led a cloud migration with zero downtime.
 - **[Cepro.ai](https://cepro.ai):** Next.js 15 + React 19 rebuild, 17 pages, in-browser Arabic OCR
   (Tesseract.js), delivered two weeks early.
+- **[siprc.sa](https://www.siprc.sa):** built the company website (TypeScript, Vite, GSAP; Arabic/English)
+  and its AI customer-support assistant.
 - **Before that:** sole frontend engineer at Digitee, shipping six production apps including an AR
   virtual try-on and a Three.js 3D showroom, and extending a multi-locale setup to 16 languages with
   full RTL. Earlier, frontend engineer on Keme, a US clinic-management platform, at IDAAM.
