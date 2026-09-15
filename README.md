@@ -75,6 +75,13 @@ users report it as "the number is wrong" rather than as a rendering bug. The kit
 runs, plus direction state that survives SSR, logical-property utilities, and locale-aware
 formatting across numbering systems. MIT, 106 tests, CI on Node 20 and 22.
 
+**[django-rtl-admin](https://github.com/MarwanMaher0/django-rtl-admin)** — the same problem on the
+server side. The Django admin in an RTL locale is mirrored, not translated: the add-button icon
+sits on the wrong edge, object tools float the wrong way, the sidebar chevron never swaps, and
+table cells reverse identifiers. This fixes the styling with logical properties, isolates cell
+contents, formats numbers and dates for the active locale's numbering system, and adds a language
+switcher. MIT, 192 tests, CI across Django 4.2 to 6.1 on Python 3.10 to 3.13.
+
 **[claude-account-switcher](https://github.com/MarwanMaher0/claude-account-switcher)** — run
 several Claude Code accounts and fail over when one hits its rate limit, carrying the conversation
 across. Built because I kept stalling on one subscription while a second sat idle. MIT, Linux and
