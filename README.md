@@ -1,35 +1,28 @@
 # Marwan Maher
 
-**Technical PM & Engineer · IP & Trademark Systems · Egypt (working with a Riyadh IP-services firm) · Open to remote & relocation (KSA/UAE)**
+**Technical PM & Engineer · IP & Legal-tech · Egypt (working with a Riyadh IP-services firm) · Open to remote & relocation (KSA/UAE)**
 
 I am the Project Manager for IT projects at an IP-services firm in Riyadh — turning trademark
 filing, watching and enforcement from spreadsheet-and-inbox work into systems that run on their
 own and tell people what needs doing.
 
-Most of what I ship is internal, so this profile is the part that generalises: how I think about
-building software for a domain where being wrong has legal consequences.
+The products themselves are my employer's and stay internal, so this profile is the part that
+generalises: how I think about building software for a domain where being wrong has legal
+consequences.
 
 ---
 
 ## What I work on
 
-**Trademark watch, at registry scale.**
-Monitoring national registries and official gazettes for marks that conflict with a client's
-portfolio, across multiple countries and two scripts. The hard part is not fetching the data — it
-is deciding which of hundreds of thousands of new marks actually threaten yours, and being able to
-defend that judgement to a lawyer. Ran a four-vendor RFQ for the build, then designed and led the
-in-house implementation; it is in production, monitoring registries across 21 countries.
-
-**Matching that survives Arabic and English in the same pipeline.**
-A staged funnel rather than one clever score: filter by Nice classification, retrieve nearest
-neighbours by vector similarity, rank on a composite of phonetic, visual and semantic distance,
-then put the survivors in front of a language model for a reasoned verdict. Each stage exists
-because the stage before it produced a specific kind of false positive.
+**Owning a portfolio, not a ticket queue.**
+Five production systems, from requirements and procurement through release and maintenance. That
+includes writing the requirements a vendor is judged against, running the evaluation, and being
+the one accountable when the decision is to build instead of buy.
 
 **AI where it is accountable, not decorative.**
-Model output that drives a legal recommendation gets judged against real historical cases before
-anyone trusts it. I care far more about the false-positive rate an operator actually sees than
-about a benchmark number.
+Model output that drives a legal recommendation gets validated against real historical outcomes
+before anyone trusts it. I care far more about the false-positive rate an operator actually sees
+than about a benchmark number.
 
 **The platform underneath.**
 Django and Vue, bilingual Arabic/English with genuine RTL rather than a mirrored afterthought,
@@ -38,19 +31,23 @@ that decides whether any of the above reaches a user.
 
 **Deciding what not to build.**
 I spend as much time cutting scope as adding it. Most operational pain turns out to be a workflow
-problem wearing a feature request as a disguise.
+problem wearing a feature request as a disguise. One finished reporting build was rejected because
+it missed what the business actually needed; re-scoping it was the right call, not a setback.
 
 ---
 
 ## Selected work
 
-- **IPORA** — IP management platform with 52 live services. Sole architect and builder, from an
-  empty repo to production; now the daily system of record for operations. Django + Vue,
-  bilingual Arabic/English with genuine RTL.
-- **TM Watch** — trademark watch at registry scale. Ran a four-vendor RFQ, then designed and led
-  the in-house build; in production, monitoring registries across 21 countries.
+- **IP management platform** — sole architect and builder, from an empty repo to production; now
+  the daily system of record for operations. Django + Vue, bilingual Arabic/English with genuine
+  RTL, role-scoped access.
+- **Trademark monitoring** — as PM: wrote the requirements, ran a four-vendor evaluation, then led
+  the in-house build. In production.
 - **[Cepro.ai](https://cepro.ai)** — Next.js 15 + React 19 rebuild with in-browser Arabic OCR
-  (Tesseract.js). Live at https://cepro.ai.
+  (Tesseract.js), delivered two weeks early. Live at https://cepro.ai.
+
+Internal products are described at the level of my role only; implementation details belong to my
+employer.
 
 Portfolio & CV: https://marwanmaher.vercel.app
 
@@ -79,12 +76,15 @@ macOS, no network calls, 218 assertions that consume no API quota.
 The interesting part was the constraint: an account is bound at process start, so nothing can
 switch one mid-session. Everything else follows from accepting that.
 
+**[vue-intent](https://github.com/MarwanMaher0/vue-intent)** — Vue 3 adapter for intent-first,
+state-driven UIs: permission guards, navigation protection, a composable API. TypeScript.
+
 ---
 
 ## Tools
 
 `Python` · `Django` · `Vue` · `PostgreSQL` · `Playwright` · `Docker` · `OCI` / `AWS` ·
-`vector search` · `LLM pipelines` · `Arabic/English RTL`
+`LLM pipelines` · `Arabic/English RTL`
 
 ---
 
