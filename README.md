@@ -68,6 +68,23 @@ Portfolio & CV: https://marwanmaher.vercel.app
 
 ## Open source
 
+Three small tools that teach one project from start to finish — decide, ship, learn:
+
+**[decision-matrix](https://github.com/MarwanMaher0/decision-matrix)** — a guided decision matrix for
+build-versus-buy and tool choices ([try it](https://marwanmaher0.github.io/decision-matrix/)). It keeps
+must-haves apart from weighted criteria, shows how far a weight has to move before a different option
+wins, and writes a decision record you can commit. Runs entirely in the browser. Vue 3, 63 tests.
+
+**[phasegate](https://github.com/MarwanMaher0/phasegate)** — a CLI and GitHub Action that walks a project
+from discover to operate. It writes short guided documents for each phase and fails CI when a phase the
+team has moved past is not actually done: requirements without acceptance criteria, decisions still
+"proposed", a release checklist with no rollback plan. It checks its own repository. TypeScript, 86 tests.
+
+**[django-postmortem](https://github.com/MarwanMaher0/django-postmortem)** — blameless incident reviews
+for Django. It flags blame-shaped phrasing, and every action item has to name the guard that stops the
+failure coming back: a regression test, a constraint, an alert. A review cannot close until each fix is
+verified. 133 tests.
+
 **[vue-rtl-kit](https://github.com/MarwanMaher0/vue-rtl-kit)** — a Vue 3 and Nuxt toolkit for
 right-to-left that actually holds up. The piece I care about is bidirectional text: in an Arabic
 sentence, a date, a phone number, an order reference or a version string silently reverses, and
