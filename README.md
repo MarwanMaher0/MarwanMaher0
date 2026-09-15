@@ -68,6 +68,13 @@ Portfolio & CV: https://marwanmaher.vercel.app
 
 ## Open source
 
+**[vue-rtl-kit](https://github.com/MarwanMaher0/vue-rtl-kit)** — a Vue 3 and Nuxt toolkit for
+right-to-left that actually holds up. The piece I care about is bidirectional text: in an Arabic
+sentence, a date, a phone number, an order reference or a version string silently reverses, and
+users report it as "the number is wrong" rather than as a rendering bug. The kit isolates those
+runs, plus direction state that survives SSR, logical-property utilities, and locale-aware
+formatting across numbering systems. MIT, 106 tests, CI on Node 20 and 22.
+
 **[claude-account-switcher](https://github.com/MarwanMaher0/claude-account-switcher)** — run
 several Claude Code accounts and fail over when one hits its rate limit, carrying the conversation
 across. Built because I kept stalling on one subscription while a second sat idle. MIT, Linux and
