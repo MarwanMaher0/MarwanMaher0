@@ -38,7 +38,7 @@ number is wrong" rather than as a rendering bug. Both kits exist for that.
 
 | Tool | What it helps you do | Stack | Tests | Link |
 | --- | --- | --- | ---: | --- |
-| **claude-account-switcher** | Run several Claude Code accounts and fail over when one hits its rate limit, carrying the conversation across | Bash · Python | 218 assertions | [repo](https://github.com/MarwanMaher0/claude-account-switcher) |
+| **claude-account-switcher** | Run several Claude Code accounts and fail over when one hits its rate limit, carrying the conversation across | Bash · Python | 232 checks | [repo](https://github.com/MarwanMaher0/claude-account-switcher) |
 
 All six are MIT-licensed and run their tests in CI. Also:
 [vue-intent](https://github.com/MarwanMaher0/vue-intent), a Vue 3 adapter for intent-first,
@@ -86,7 +86,7 @@ employer.
   comment explaining *why*, and a line in the README.
 - **Say plainly what broke.** Post-mortems that hedge teach nobody anything.
 
-**Stack:** `Python` · `Django` · `Vue 3` · `Nuxt` · `TypeScript` · `Next.js` · `React` ·
+**Stack:** `Python` · `Django` · `PostgreSQL` · `Vue 3` · `Nuxt` · `TypeScript` · `Next.js` · `React` ·
 `Selenium` · `GitHub Actions` · `Arabic/English RTL`
 
 ---
